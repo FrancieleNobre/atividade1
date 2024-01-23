@@ -1,0 +1,59 @@
+1- O Git é um projeto de código aberto maduro e com manutenção ativa desenvolvido em 2005 por Linus Torvalds, o famoso criador do kernel do sistema operacional Linux. E a sua principal função é gerenciar ramificações feitas por diferentes pessoas de um time de modo a manter a ordem e integração de todas as partes. Ou seja, mesmo que várias pessoas estejam trabalhando em um programa ao mesmo tempo, ainda é possível controlar as mudanças para evitar erros.
+
+2- Para criar um novo repositório, você vai usar o comando git init . git init é um comando único que você usa durante a configuração inicial de um novo repositório. A execução desse comando cria um novo subdiretório . git no diretório de trabalho atual.
+
+3- Git add adiciona arquivos modificados a uma área temporária, a staging area, sem que haja um comprometimento com a fixação dessas modificações. Arquivos podem ser adicionados ou removidos dessa área à revelia do desenvolvedor antes do comprometimento ocorrer. Enquanto o git commit (do inglês "comprometer-se"), como o próprio nome diz, se compromete com as modificações que foram adicionadas e gera um commit, que é um conjunto das diferenças existentes em relação a um commit anterior na árvore de versionamento.
+
+4- O comando git push permite que você envie (ou em tradução literal, empurre) os commits de sua branch e repositório Git local para o seu repositório remoto. Para poder fazer um git push para seu repositório remoto, você deve garantir que todas as suas alterações no repositório local sejam confirmadas.
+
+5- De maneira simplificada, os ramos (branches) no Git são semelhantes a um ramo de uma árvore, onde o tronco seria a base do código. Desse modo é possível criar diversos ramos e fazer alterações, enquanto a base permanece intacta. Por padrão o ramo principal é denominado de main (master, na versão antiga). Quando temos uma versão estável do código na branch master e queremos adicionar uma nova funcionalidade, criamos então uma branch pra desenvolver a funcionalidade sem ter o perigo de quebrar o que já temos na branch master e quando temos uma versão estável do código na branch master e precisamos corrigir algum bug encontrado, criamos uma branch pra trabalhar nesse bug e não corremos o risco de danificar o código estável são dois exemplos de porque os branches podem ser úteis.
+
+6- Através do comando git status, que exibe as condições do diretório de trabalho e da área de staging. Ele permite que você veja quais alterações foram despreparadas, quais não foram e quais arquivos não estão sendo monitorados pelo Git. Os resultados de status não exibem qualquer informação sobre o histórico de projetos que recebeu commit. Para tal, você precisa usar o git log.
+
+7- Os conflitos de merge ocorrem quando alterações concorrentes são feitas na mesma linha de um arquivo ou quando uma pessoa edita um arquivo e outra pessoa exclui o mesmo arquivo. Os métodos mais comuns de se resolver um conflito de merge são: git status, para verificar identificar os conflitos, git log --merge, que produz uma lista de commits que estão em conflito com o branch de origem, e git diff que mostrará a diferença entre alterações não confirmadas e commits anteriores, é usado para comparar branches, commits e arquivos, e é útil para previnir futuros conflitos de merge.
+
+8- O GitHub é um sistema de controle de versão. Sempre que desenvolvedores criam um novo projeto eles continuam criando atualizações no código base. Mesmo depois de o projeto ser lançado é comum a atualização de versões, correção de bugs, adição de novas ferramentas, etc. O sistema de controle de versão ajuda a acompanhar as mudanças feitas no código base. E mais, ele também registra quem efetuou a mudança e permite a restauração do código removido ou modificado. E a diferença é que o Git é uma ferramenta de controle de versão local, enquanto o GitHub é uma plataforma online que permite hospedar projetos Git e colaborar com outras pessoas.
+
+9- Os repositórios públicos podem ser acessados por todos na Internet. Enquanto os repositórios privados só podem ser acessados por você, pelas pessoas com as quais você compartilha explicitamente o acesso e, para repositórios da organização, por determinados integrantes da organização.
+
+10- Para clonar um repositório para o seu computador, é só seguir os seguintes passsos:
+
+-No GitHub.com, navegue até a página principal do repositório.
+
+-Acima da lista de arquivos, clique em <> Código.
+
+-Copie a URL do repositório.
+
+	-Para clonar o repositório usando HTTPS, em "HTTPS", clique em um símbolo de prancheta.
+
+	-Para clonar o repositório usando uma chave SSH, incluindo um certificado emitido pela autoridade de certificação SSH da sua organização, clique em SSH e em um símbolo de prancheta.
+
+	-Para clonar um repositório usando a GitHub CLI, clique em GitHub CLI e em um símbolo com dois quadrados.
+
+-Abra Git Bash.
+
+-Altere o diretório de trabalho atual para o local em que deseja ter o diretório clonado.
+
+-Digite git clone e cole a URL já copiada.
+Exemplo:
+
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+-Pressione ENTER para criar seu clone local.
+
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+
+11- Uma pull request é uma proposta para mesclar as alterações de um branch em outro. Em uma pull request, os colaboradores podem revisar e discutir o conjunto de alterações proposto antes de integrá-las à base de código principal. As pull requests exibem as diferenças, ou comparações, entre o conteúdo no branch de origem e aquele no branch de destino. E o seu propósito é permitir que você informe outras pessoas sobre as alterações por push feitas em uma ramificação de um repositório no GitHub.
+
+12- Para criar um arquivo .gitignore local, crie um arquivo de texto e dê a ele o nome de  .gitignore (lembre-se de incluir o . no começo). Em seguida, edite esse arquivo conforme necessário. Cada nova linha deve listar um arquivo ou pasta adicional que você quer que o Git ignore. A funcionalidade do arquivo .gitignore é dizer ao Git quais arquivos ou pastas ele deve ignorar em um projeto.
+
+13- Um fork é um novo repositório que compartilha configurações de código e visibilidade com o repositório "upstream" original. Os forks geralmente são usados para iterar ideias ou alterações antes de serem propostas de volta para o repositório upstream, como em projetos código aberto ou quando um usuário não tem acesso de gravação ao repositório upstream.
+
+14- A ferramenta mais básica e poderosa para fazer isso é o comando git log . Por padrão, sem argumentos, git log lista os commits feitos neste repositório em ordem cronológica inversa; isto é, o commit mais recente aparece primeiro.
+
+15- O comando git pull é usado para buscar e baixar conteúdo de repositórios remotos e fazer a atualização imediata ao repositório local para que os conteúdos sejam iguais. Para reduzir a resistência de novos contribuidores, além de permitir que as pessoas trabalhem de modo independente sem coordenação inicial.
